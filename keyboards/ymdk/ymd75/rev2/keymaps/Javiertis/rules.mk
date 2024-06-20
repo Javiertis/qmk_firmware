@@ -1,3 +1,2 @@
 TAP_DANCE_ENABLE = yes
-RGB_MATRIX_ENABLE = yes
-RGB_MATRIX_DRIVER = ws2812
+SRC+=matrix_rgb_function.c
