@@ -8,6 +8,9 @@
         "pid": "0x422D",
         "device_version": "2.0.0"
     },
+    "build":{
+        "lto":true
+    },
     "features": {
         "backlight": false,
         "tapdance":true,
@@ -15,13 +18,13 @@
         "command": true,
         "console": false,
         "extrakey": true,
-        "key_lock": true,
+        "key_lock": false,
         "mousekey": false,
-        "nkro": false,
+        "nkro": true,
         "rgblight": false,
         "rgb_matrix":true
     },
-    "debounce":20,
+    "debounce":12,
     "matrix_pins": {
         "cols": ["A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "C7", "C6", "C5", "C4", "C3", "C2", "D7"],
         "rows": ["B7", "B6", "B5", "B4", "B3", "B0"]
@@ -35,8 +38,8 @@
         "driver": "i2c"
     },
     "rgb_matrix":{
-    "sleep": true,
-         "driver": "ws2812",
+        "sleep": true,
+        "driver": "ws2812",
         "layout":[
                 {"matrix": [0, 0], "x": 16, "y": 13, "flags":255},
                 {"matrix": [0, 1], "x": 48, "y": 13, "flags":16},
@@ -53,10 +56,13 @@
                 {"matrix": [1, 5], "x": 48, "y": 51, "flags":4},
                 {"matrix": [1, 6], "x": 16, "y": 51, "flags":1}
         ],
-        "animations": {
-            "alphas_mods": true,
-
-        }
+        "default":{
+            "hue":230,
+            "sat": 35
+        },
+        "sat_steps":5,
+        "hue_steps":5,
+        "val_steps":5
     },
     "rgblight": {
         "led_count": 14
